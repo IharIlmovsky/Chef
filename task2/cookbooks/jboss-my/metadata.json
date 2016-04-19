@@ -1,0 +1,9 @@
+{
+  "name": "jboss-my",
+  "description": "Installs/Configures jboss",
+  "platforms": {
+  }
+#  "dependencies": {
+#    "java": ">= 0.0.0"
+#  }
+}
