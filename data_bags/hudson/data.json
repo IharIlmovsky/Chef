@@ -1,0 +1,19 @@
+{
+  "id": "data",
+  "cumulogic-app": {
+    "single-vm": "false",
+    "application": {
+      "application-context": "hudson",
+      "application-file-name": "hudson.war",
+      "bind-global-services": "true"
+    },
+    "services": {
+      "framework": {
+        "type": "Java EE",
+        "engine": "JBoss-5.1.0.GA",
+        "no-of-nodes": "1",
+        "max-nodes": "2"
+      }
+    }
+  }
+}

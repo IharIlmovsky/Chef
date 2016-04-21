@@ -1,0 +1,47 @@
+#!/bin/bash
+#jboss        Startup script for the JBoss Java Application Server
+#
+# chkconfig: - 85 15
+# description: The JBoss Java Application Server 
+#
+# processname: jboss
+
+JBOSS_HOME="<%= @jboss_home %>"
+
+start()
+{
+echo "Starting jboss"
+       su - <%= @jboss_user %> -c "nohup $JBOSS_HOME/bin/run.sh -b <%= @jboss_ip %> > $JBOSS_HOME/server/default/logs/run.log 2>> $JBOSS_HOME/server/default/logs/error_start.log & "
+#exit 0
+}
+
+stop()
+{
+echo "Stopping jboss"
+       su - <%= @jboss_user %> -c "nohup $JBOSS_HOME/bin/shutdown.sh -s jnp://<%= @jboss_ip %>:1099 -S -u admin -p admin > $JBOSS_HOME/server/default/logs/shutdown.log 2>> $JBOSS_HOME/server/default/logs/error_stop.log & "
+#exit 0
+}
+
+restart()
+{
+stop
+sleep 60
+start
+}
+
+case "$1" in
+	start)
+		start
+;;
+	stop)
+		stop
+;;
+	restart)
+		restart
+;;
+	*)
+
+echo "Usage: jboss {start|stop|restart}"
+exit 1
+esac
+exit 0

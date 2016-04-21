@@ -1,0 +1,13 @@
+default['jboss-my']['tmp_dir'] = '/tmp'
+default['jboss-my']['install_path'] = '/opt'
+default['jboss-my']['jboss_home'] = "#{ node['jboss-my']['install_path'] }/jboss-5.1.0.GA"
+default['jboss-my']['jboss_log'] = "#{ node['jboss-my']['jboss_home'] }/server/default/logs"
+default['jboss-my']['url'] = 'http://sourceforge.net/projects/jboss/files/JBoss/JBoss-5.1.0.GA/jboss-5.1.0.GA.zip'
+default['jboss-my']['jboss_ip'] = "#{ node["network"]["interfaces"]["eth1"]["addresses"].keys[1] }"
+default['jboss-my']['jboss_user'] = 'jboss'
+default['jboss-my']['jboss_group'] = 'jboss'
+default['jboss-my']['deploy_path'] = "#{ node['jboss-my']['jboss_home'] }/server/default/deploy"
+default['jboss-my']['app_archive_name'] = "testweb.zip"
+default['jboss-my']['app_url'] = "http://www.cumulogic.com/download/Apps/testweb.zip"
+default['jboss-my']['app_dir'] = "testweb"
+default['jboss-my']['app_xml_name'] = "testweb.xml"

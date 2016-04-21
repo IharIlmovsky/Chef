@@ -1,0 +1,12 @@
+{
+  "name": "jdk6",
+  "default_attributes": {
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "6",
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "xml_original",
+  "cumulogic-app": {
+    "single-vm": "false",
+    "application": {
+      "application-context": "hudson",
+      "application-file-name": "hudson.war",
+      "bind-global-services": "true"
+    },
+    "services": {
+      "framework": {
+        "type": "Java EE",
+        "engine": "Tomcat-7.0.12",
+        "no-of-nodes": "1",
+        "max-nodes": "2"
+      },
+      "elastic-load-balancer": {
+        "engine": "Nginx-1.2"
+      }
+    }
+  }
+}
