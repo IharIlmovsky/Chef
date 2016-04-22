@@ -1,0 +1,6 @@
+{
+  "name": "nginx_role",
+  "run_list": [
+    "recipe[web_nginx]"
+  ]
+}

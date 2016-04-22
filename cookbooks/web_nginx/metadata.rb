@@ -1,0 +1,7 @@
+name             'web_nginx'
+maintainer       'YOUR_NAME_HERE'
+maintainer_email 'YOUR_EMAIL_HERE'
+license          'All rights reserved'
+description      'Installs/Configures web_nginx'
+version          '0.0.1'
+depends 'web'

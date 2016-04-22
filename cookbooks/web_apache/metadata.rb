@@ -1,0 +1,7 @@
+name             'web_apache'
+maintainer       'YOUR_COMPANY_NAME'
+maintainer_email 'YOUR_EMAIL_HERE'
+license          'All rights reserved'
+description      'Installs/Configures web_apache'
+version          '0.0.1'
+depends 'web'

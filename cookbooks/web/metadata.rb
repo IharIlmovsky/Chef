@@ -1,0 +1,8 @@
+name             'web'
+maintainer       'somebody_here'
+maintainer_email 'EMAIL@whatever.com'
+license          'All rights reserved'
+description      'Installs/Configures web'
+version          '0.1.0'
+depends 'web_apache'
+depends 'web_nginx'
